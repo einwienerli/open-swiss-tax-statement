@@ -1,0 +1,1218 @@
+{
+  "AL:BOND": {
+    "withholding_rate": "15",
+    "release": "10",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AL:SHARE": {
+    "withholding_rate": "8",
+    "release": "0",
+    "non_recoverable": "8",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AM:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AM:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AR:BOND": {
+    "withholding_rate": "35",
+    "release": "23",
+    "non_recoverable": "12",
+    "non_recoverable_max": "12",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AR:SHARE": {
+    "withholding_rate": "7",
+    "release": "0",
+    "non_recoverable": "7",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AT:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AU:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AU:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AZ:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "AZ:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BD:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BD:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BE:BOND": {
+    "withholding_rate": "30",
+    "release": "20",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BE:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BG:BOND": {
+    "withholding_rate": "10",
+    "release": "5",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BG:SHARE": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BR:BOND": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BR:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BS:BOND": {
+    "withholding_rate": "10",
+    "release": "2",
+    "non_recoverable": "8",
+    "non_recoverable_max": "8",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BS:SHARE": {
+    "withholding_rate": "15",
+    "release": "2",
+    "non_recoverable": "13",
+    "non_recoverable_max": "13",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BY:BOND": {
+    "withholding_rate": "13",
+    "release": "5",
+    "non_recoverable": "8",
+    "non_recoverable_max": "8",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "BY:SHARE": {
+    "withholding_rate": "13",
+    "release": "0",
+    "non_recoverable": "13",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CA:BOND": {
+    "withholding_rate": "25",
+    "release": "15",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CA:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CI:BOND": {
+    "withholding_rate": "18",
+    "release": "3",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CI:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CL:BOND": {
+    "withholding_rate": "35",
+    "release": "25",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CN:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CN:SHARE": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CO:SHARE": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "CZ:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "DE:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "DK:SHARE": {
+    "withholding_rate": "27",
+    "release": "12",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "DZ:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "DZ:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "EC:BOND": {
+    "withholding_rate": "25",
+    "release": "15",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "EC:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "EE:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "EG:BOND": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ES:SHARE": {
+    "withholding_rate": "19",
+    "release": "4",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ET:BOND": {
+    "withholding_rate": "10",
+    "release": "5",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ET:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "FI:SHARE": {
+    "withholding_rate": "30",
+    "release": "20",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "FO:SHARE": {
+    "withholding_rate": "27",
+    "release": "12",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "FR:SHARE": {
+    "withholding_rate": "12.8",
+    "release": "0",
+    "non_recoverable": "12.8",
+    "non_recoverable_max": "12.8",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "GB:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "GH:BOND": {
+    "withholding_rate": "8",
+    "release": "0",
+    "non_recoverable": "8",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "GH:SHARE": {
+    "withholding_rate": "8",
+    "release": "0",
+    "non_recoverable": "8",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "GR:BOND": {
+    "withholding_rate": "15",
+    "release": "8",
+    "non_recoverable": "7",
+    "non_recoverable_max": "7",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "GR:SHARE": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "HK:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "HR:SHARE": {
+    "withholding_rate": "12",
+    "release": "0",
+    "non_recoverable": "12",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "HU:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ID:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ID:SHARE": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IE:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IL:BOND": {
+    "withholding_rate": "26.5",
+    "release": "16.5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IL:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IN:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IN:SHARE": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IR:BOND": {
+    "withholding_rate": "3",
+    "release": "0",
+    "non_recoverable": "3",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IR:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IS:SHARE": {
+    "withholding_rate": "22",
+    "release": "7",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IT:BOND": {
+    "withholding_rate": "26",
+    "release": "13.5",
+    "non_recoverable": "12.5",
+    "non_recoverable_max": "12.5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "IT:SHARE": {
+    "withholding_rate": "26",
+    "release": "11",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "JM:BOND": {
+    "withholding_rate": "33.33",
+    "release": "23.33",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "JM:SHARE": {
+    "withholding_rate": "33.33",
+    "release": "18.33",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "JP:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "JP:SHARE": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KG:BOND": {
+    "withholding_rate": "10",
+    "release": "5",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KG:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KR:BOND": {
+    "withholding_rate": "22",
+    "release": "12",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KR:SHARE": {
+    "withholding_rate": "22",
+    "release": "7",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KZ:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "KZ:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LK:BOND": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LT:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LT:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LU:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LU:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LV:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "LV:SHARE": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MA:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MA:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MD:BOND": {
+    "withholding_rate": "12",
+    "release": "2",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MD:SHARE": {
+    "withholding_rate": "6",
+    "release": "0",
+    "non_recoverable": "6",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ME:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ME:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MK:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MK:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MN:SHARE": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MT:BOND": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MX:BOND": {
+    "withholding_rate": "35",
+    "release": "25",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MX:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "MY:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "NL:BOND": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "NL:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "NO:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "NZ:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "NZ:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "OM:BOND": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "OM:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PE:BOND": {
+    "withholding_rate": "30",
+    "release": "20",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PE:SHARE": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PH:BOND": {
+    "withholding_rate": "25",
+    "release": "15",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PH:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PK:BOND": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PK:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "20",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PL:BOND": {
+    "withholding_rate": "20",
+    "release": "15",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PL:SHARE": {
+    "withholding_rate": "19",
+    "release": "4",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PT:BOND": {
+    "withholding_rate": "25",
+    "release": "15",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "PT:SHARE": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "QA:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "RO:BOND": {
+    "withholding_rate": "16",
+    "release": "11",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "RO:SHARE": {
+    "withholding_rate": "8",
+    "release": "0",
+    "non_recoverable": "8",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "RS:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "RS:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "RU:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SE:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SG:BOND": {
+    "withholding_rate": "15",
+    "release": "10",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SG:SHARE": {
+    "withholding_rate": "0",
+    "release": "0",
+    "non_recoverable": "0",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SI:BOND": {
+    "withholding_rate": "25",
+    "release": "20",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SI:SHARE": {
+    "withholding_rate": "25",
+    "release": "12.5",
+    "non_recoverable": "12.5",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SK:BOND": {
+    "withholding_rate": "19",
+    "release": "14",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "SK:SHARE": {
+    "withholding_rate": "7",
+    "release": "0",
+    "non_recoverable": "7",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TH:BOND": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TH:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TJ:BOND": {
+    "withholding_rate": "25",
+    "release": "10",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TJ:SHARE": {
+    "withholding_rate": "25",
+    "release": "15",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TM:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TM:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TN:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TN:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TR:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TT:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TT:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "20",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TW:BOND": {
+    "withholding_rate": "20",
+    "release": "10",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "TW:SHARE": {
+    "withholding_rate": "21",
+    "release": "6",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UA:BOND": {
+    "withholding_rate": "15",
+    "release": "5",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UA:SHARE": {
+    "withholding_rate": "15",
+    "release": "0",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "US:SHARE": {
+    "withholding_rate": "30",
+    "release": "15",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UY:BOND": {
+    "withholding_rate": "12",
+    "release": "2",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UY:SHARE": {
+    "withholding_rate": "7",
+    "release": "0",
+    "non_recoverable": "7",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UZ:BOND": {
+    "withholding_rate": "10",
+    "release": "5",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "UZ:SHARE": {
+    "withholding_rate": "10",
+    "release": "0",
+    "non_recoverable": "10",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "VE:BOND": {
+    "withholding_rate": "34",
+    "release": "29",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "VE:SHARE": {
+    "withholding_rate": "34",
+    "release": "24",
+    "non_recoverable": "10",
+    "non_recoverable_max": "10",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "VN:BOND": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "VN:SHARE": {
+    "withholding_rate": "5",
+    "release": "0",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ZA:BOND": {
+    "withholding_rate": "15",
+    "release": "10",
+    "non_recoverable": "5",
+    "non_recoverable_max": "5",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  },
+  "ZA:SHARE": {
+    "withholding_rate": "20",
+    "release": "5",
+    "non_recoverable": "15",
+    "non_recoverable_max": "15",
+    "security_type": "",
+    "da1_rate_type": "OTHER"
+  }
+}

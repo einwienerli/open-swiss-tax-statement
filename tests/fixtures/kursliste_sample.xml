@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kursliste xmlns="http://xmlns.estv.admin.ch/ictax/2.2.0/kursliste"
+           version="2.2.0" creationDate="2026-02-06" year="2025">
+
+  <share id="18968" valorNumber="3886335" isin="CH0038863350"
+         securityGroup="SHARE" securityType="SHARE.NOMINAL"
+         securityAppendix="nominatives"
+         institutionId="1368" institutionName="Nestle S.A."
+         country="CH" currency="CHF" nominalValue="0.10" capitalKey="1120">
+    <yearend quotationType="PIECE" taxValue="74.52" taxValueCHF="74.52"/>
+    <payment paymentIdSIX="590705211" paymentDate="2025-04-17"
+             currency="CHF" paymentValueCHF="3.15"
+             capitalGain="0" withHoldingTax="1" exDate="2025-04-15"/>
+  </share>
+
+  <share id="20001" valorNumber="908440" isin="US0378331005"
+         securityGroup="SHARE" securityType="SHARE.NOMINAL"
+         securityAppendix="Common Stock"
+         institutionId="2001" institutionName="Apple Inc."
+         country="US" currency="USD" nominalValue="0.00001">
+    <yearend quotationType="PIECE" taxValue="254.49" taxValueCHF="228.97"
+             exchangeRate="0.899800"/>
+    <payment paymentDate="2025-02-15" currency="USD"
+             paymentValue="0.25" exchangeRate="0.905690"
+             paymentValueCHF="0.22"
+             capitalGain="0" withHoldingTax="1" exDate="2025-02-13"/>
+  </share>
+
+  <fund id="298944" valorNumber="18575458" isin="IE00B3XXRP09"
+        securityGroup="FUND" securityType="FUND.DISTRIBUTION"
+        securityAppendix="USD Distributing"
+        institutionId="3001" institutionName="Vanguard Funds PLC"
+        country="IE" currency="USD" nominalValue="1">
+    <yearend quotationType="PIECE" taxValueCHF="103.56"/>
+    <payment paymentDate="2025-03-26" currency="USD"
+             paymentValue="0.5010" exchangeRate="0.880430"
+             paymentValueCHF="0.44"
+             capitalGain="0" withHoldingTax="0" exDate="2025-03-24"/>
+  </fund>
+
+  <bond id="40001" valorNumber="123456789" isin="CH0123456789"
+        securityGroup="BOND" securityType="BOND.BOND"
+        securityAppendix="2.5% 2020-2030"
+        institutionId="4001" institutionName="Swiss Confederation"
+        country="CH" currency="CHF" nominalValue="5000">
+    <yearend quotationType="PERCENT" taxValue="101.50" taxValueCHF="101.50"/>
+  </bond>
+
+  <share id="50001" valorNumber="9999999" isin="DE0007236101"
+         securityGroup="SHARE" securityType="SHARE.NOMINAL"
+         securityAppendix="Stammaktien"
+         institutionId="5001" institutionName="Siemens AG"
+         country="DE" currency="EUR" nominalValue="3">
+    <yearend quotationType="PIECE" taxValue="195.30" taxValueCHF="183.82"
+             exchangeRate="0.941220"/>
+  </share>
+
+  <da1Rate id="1" country="US" securityGroup="SHARE" value="30" release="15" nonRecoverable="15" nonRecoverableMax="15"/>
+  <da1Rate id="2" country="US" securityGroup="FUND" value="30" release="15" nonRecoverable="15" nonRecoverableMax="15"/>
+  <da1Rate id="3" country="DE" securityGroup="SHARE" value="26.375" release="0" nonRecoverable="26.375" nonRecoverableMax="26.375"/>
+  <da1Rate id="4" country="IE" securityGroup="FUND" value="25" release="10" nonRecoverable="15" nonRecoverableMax="15"/>
+  <da1Rate id="5" country="US" securityGroup="SHARE" da1RateType="LP" value="15" release="0" nonRecoverable="15" nonRecoverableMax="15"/>
+
+</kursliste>
