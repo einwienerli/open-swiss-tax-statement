@@ -1,0 +1,56 @@
+                                                                                                                          Mrs. Jane Doe
+                                                                                                                          Teststrasse 1
+                                                                                                                          8000 Zurich
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   Portfolio performance at 31.12.2025
+
+
+                             Account number                                   999999
+                             Account owner                                     Mrs. Jane Doe
+                             Valued in                                              CHF
+                             Performance period                             From 01.01.2025 to 31.12.2025
+
+
+ 2.   Asset allocation
+
+
+  Cash
+        Currency     Reference                  Description                                                                                                                                                                                   Value         Exchange rate                 Valuation in CHF           %
+             EUR        99999002                    Current Account (EUR)                                                                                                                                                                 395.38               0.93086                           368.04     0.91
+             USD        99999001                    Current Account (USD)                                                                                                                                                             18'602.99               0.79243                       14'741.57   36.42
+
+                                                                                                                                                                                                 Total cash                                                                                         15'109.61   37.33
+
+  Shares in EUR
+                       Quantity   Security                                                              ISIN                                                  Average price            Market Price                Price date                Valuation in EURExchange rate                 Valuation in CHF                %
+
+                            100   BMW ORD                                                      DE0005190003                                 79.160                 93.343          31.12.2025                        9'334.25                                                                         8'688.83        21.47
+                              80  VOLKSWAGEN NV PRF                                            DE0007664039                                 88.160               103.681          31.12.2025                        8'294.50                                                                          7'720.98        19.07
+
+                                                                                                                                                                                   Total shares inEUR                      17'628.75                0.93086                                          16'409.81  40.54
+
+  Shares in DKK
+                       Quantity   Security                                                              ISIN                                                  Average price            Market Price                Price date                Valuation inDKK Exchange rate                 Valuation in CHF                %
+
+                            221   NOVO NORDISK ORD                                             DK0062498333                               641.724               325.250          31.12.2025                      71'880.25                                                                            8'958.22        22.13
+
+                                                                                                                                                                                   Total shares inDKK                      71'880.25                0.12463                                           8'958.22  22.13
+
+
+  Total assets in CHF                                                                                                                                                                                                                                                       40'477.64

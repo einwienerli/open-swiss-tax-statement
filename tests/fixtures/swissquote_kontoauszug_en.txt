@@ -1,0 +1,432 @@
+Your account statement                                                        Mrs. Jane Doe
+
+Account statementfrom 01.01.2025 to 31.12.2025                                Teststrasse 1
+Document generated on 01.01.2026                                              8000 Zurich
+
+Opening balance                     19'492.37 CHF                             IBAN                                           CH12 0878 1000 0999 9990 0
+Closing balance                     15'109.61 CHF                             Client                                                                 999999
+                                                                              Account Type                                                         TRADING
+                                                                              SWIFT                                                       SWQBCHZZ XXX
+
+
+
+
+
+
+
+     Closing balance split across all currencies
+
+      Swiss Franc                                         US Dollar                                           Euro
+      0.00 CHF                                            18'602.99 USD                                       395.38 EUR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This notification as well as the transaction are governed by our General Conditions and Safe Custody Regulations.
+Advice without signature. Swissquote Bank Ltd, a bank regulated by the Swiss Financial Market Supervisory Authority (FINMA).
+Swissquote Bank Ltd, 33 chemin de la Crétaux, CH-1196 Gland                                                                                            Page 1 / 5
+Customer Care : 0848 25 88 88 (from abroad +41 44 825 88 88)
+                                                                                                                                                   Document generated on 01.01.2026
+                    Mrs. Jane Doe                                                                                                                         From 01.01.2025 to 31.12.2025
+                    IBAN : CH12 0878 1000 0999 9990 0
+
+
+ Account statement in CHF
+ Balance at 01.01.2025                                        5'669.43 CHF
+ Totaldebit                                                    5'926.33 CHF
+ Totalcredit                                                     256.90 CHF
+ Balance at 31.12.2025                                              0.00 CHF
+
+
+ DATE             INFORMATION                                             REFERENCE   DEBIT                        CREDIT                         VALUE DATE            BALANCE (CHF)
+
+ 01.01.2025       Opening balance                                                                                                                                                    5'669.43
+
+
+
+ 31.03.2025       Safecustody Fees debit                                                   27.03                                                   31.03.2025                        5'642.40
+
+
+
+ 01.04.2025       Dividend                                              818396448                                        160.24                           01.04.2025                         5'802.64
+                  NOVO NORDISK ORD (NOVO/B)
+                  Quantity: 221
+                  Amount: DKK 1'745.90
+                  Tax: DKK 471.39
+                  Total: DKK 1'274.51
+ 30.06.2025       Safecustody Fees debit                                                   27.03                                                   30.06.2025                        5'775.61
+
+
+
+ 19.08.2025       Dividend                                              914042129                                        75.04                              19.08.2025                         5'850.65
+                  NOVO NORDISK ORD (NOVO/B)
+                  Quantity: 221
+                  Amount: DKK 828.75
+                  Tax: DKK 223.76
+                  Total: DKK 604.99
+ 30.09.2025       Safecustody Fees debit                                                   21.62                                                   30.09.2025                        5'829.03
+
+
+
+ 02.10.2025       Payment to                                            946896144     5'829.03                                                            02.10.2025                                 0.00
+                  Jane Doe
+                  CH510023823811313040Y
+                  UBS Switzerland AG
+                  Eigenübertrag
+ 31.12.2025       Safecustody Fees debit                                                   21.62                                                   31.12.2025                           -21.62
+
+
+
+ 31.12.2025       Automated Exchange                                   1007364678                                       21.62                              31.12.2025                                 0.00
+                  USD - CHF
+                  1 CHF = 1.27336 USD
+
+ 31.12.2025       Closing balance                                                                                                                                                          0.00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This notification as well as the transaction are governed by our General Conditions and Safe Custody Regulations.
+Advice without signature. Swissquote Bank Ltd, a bank regulated by the Swiss Financial Market Supervisory Authority (FINMA).
+Swissquote Bank Ltd, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                            Page 2 / 5
+Customer Care : 0848 25 88 88 (from abroad +41 44 825 88 88)
+                                                                                                                                                   Document generated on 01.01.2026
+                   Mrs. Jane Doe                                                                                                                          From 01.01.2025 to 31.12.2025
+                   IBAN : CH12 0878 1000 0999 9990 0
+
+
+ Account statement in USD
+ Balance at 01.01.2025                                     17'442.32 USD
+ Totaldebit                                               33'072.42 USD
+ Totalcredit                                              34'233.09 USD
+ Balance at 31.12.2025                                    18'602.99 USD
+
+
+ DATE             INFORMATION                                             REFERENCE   DEBIT                        CREDIT                         VALUE DATE            BALANCE (USD)
+
+ 01.01.2025      Opening balance                                                                                                                                            17'442.32
+
+
+
+ 10.03.2025      Dividend                                            803706570                                   21.00                       10.03.2025                     17'463.32
+                 ELI LILLY ORD (LLY)
+                 Quantity: 20
+                 Amount: USD 30.00
+                 Tax: USD 4.50
+                 Total: USD 21.00
+ 23.05.2025      Sell                                                853469025                                        6'036.57                        27.05.2025                       23'499.89
+                 BOEING ORD (BA )
+                 Quantity: 30
+                 Price: USD 202.55
+                 Amount: USD 6'076.53
+                 Commission: USD 30.85
+                 Tax: USD 9.11
+                 Trading Venue: New York Stock
+                 Exchange (NYSE)
+                 ISIN: US0970231058
+ 10.06.2025      Dividend                                            864041047                                   21.00                       10.06.2025                     23'520.89
+                 ELI LILLY ORD (LLY)
+                 Quantity: 20
+                 Amount: USD 30.00
+                 Tax: USD 4.50
+                 Total: USD 21.00
+ 12.06.2025      Sell                                                865721706                                        9'158.34                        13.06.2025                       32'679.23
+                 BOEING ORD (BA )
+                 Quantity: 45
+                 Price: USD 204.51
+                 Amount: USD 9'202.99
+                 Commission: USD 30.85
+                 Tax: USD 13.80
+                 Trading Venue: New York Stock
+                 Exchange (NYSE)
+                 ISIN: US0970231058
+ 10.09.2025      Dividend                                            930054960                                   21.00                       10.09.2025                     32'700.23
+                 ELI LILLY ORD (LLY)
+                 Quantity: 20
+                 Amount: USD 30.00
+                 Tax: USD 4.50
+                 Total: USD 21.00
+ 02.10.2025      Payment to                                          946896826     33'044.89                                                          02.10.2025                           -344.66
+                 Revolut Bank Uab
+                 CH0509000IMS163861107
+                 PostFinance AG
+                 Jane Doe, CH
+ 02.10.2025      Automated Exchange                                  947748361                                   344.66                      02.10.2025                            0.00
+                 EUR - USD
+                 1 USD = 0.86175 EUR
+
+
+
+
+
+
+
+
+
+
+
+
+This notification as well as the transaction are governed by our General Conditions and Safe Custody Regulations.
+Advice without signature. Swissquote Bank Ltd, a bank regulated by the Swiss Financial Market Supervisory Authority (FINMA).
+Swissquote Bank Ltd, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                     Page 3 / 5
+Customer Care : 0848 25 88 88 (from abroad +41 44 825 88 88)
+                                                                                                                                                     Document generated on 01.01.2026
+                    Mrs. Jane Doe                                                                                                                           From 01.01.2025 to 31.12.2025
+                    IBAN : CH12 0878 1000 0999 9990 0
+
+
+
+
+ DATE             INFORMATION                                             REFERENCE   DEBIT                        CREDIT                         VALUE DATE            BALANCE (USD)
+
+ 06.11.2025       Sell                                                  972184054                                        18'630.52                      07.11.2025                       18'630.52
+                  ELI LILLY ORD (LLY)
+                  Quantity: 20
+                  Price: USD 936.97
+                  Amount: USD 18'739.48
+                  Commission: USD 80.85
+                  Tax: USD 28.11
+                  Trading Venue: New York Stock
+                  Exchange (NYSE)
+                  ISIN: US5324571083
+ 31.12.2025       Automated Exchange                                    1007364678          27.53                                                    31.12.2025                      18'602.99
+                  USD - CHF
+                  1 USD = 0.78533 CHF
+
+ 31.12.2025       Closing balance                                                                                                                                                    18'602.99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This notification as well as the transaction are governed by our General Conditions and Safe Custody Regulations.
+Advice without signature. Swissquote Bank Ltd, a bank regulated by the Swiss Financial Market Supervisory Authority (FINMA).
+Swissquote Bank Ltd, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                              Page 4 / 5
+Customer Care : 0848 25 88 88 (from abroad +41 44 825 88 88)
+                                                                                                                                               Document generated on 01.01.2026
+                   Mrs. Jane Doe                                                                                                                     From 01.01.2025 to 31.12.2025
+                   IBAN : CH12 0878 1000 0999 9990 0
+
+
+ Account statement in EUR
+ Balance at 01.01.2025                                             1.20 EUR
+ Totaldebit                                                     297.01 EUR
+ Totalcredit                                                    691.19 EUR
+ Balance at 31.12.2025                                         395.38 EUR
+
+
+ DATE             INFORMATION                                             REFERENCE   DEBIT                        CREDIT                         VALUE DATE            BALANCE (EUR)
+
+ 01.01.2025      Opening balance                                                                                                                                                     1.20
+
+
+
+ 19.05.2025      Dividend                                            850373865                                    316.59                      19.05.2025                          317.79
+                 BMW ORD (BMW)
+                 Quantity: 100
+                 Amount: EUR 430.00
+                 Tax: EUR 113.41
+                 Total: EUR 316.59
+ 21.05.2025      Dividend                                            851792506                                        374.60                           21.05.2025                             692.39
+                 VOLKSWAGEN NV PRF (VOW3)
+                 Quantity: 80
+                 Amount: EUR 508.80
+                 Tax: EUR 134.20
+                 Total: EUR 374.60
+ 02.10.2025      Automated Exchange                                  947748361          297.01                                                02.10.2025                          395.38
+                 EUR - USD
+                 1 EUR = 1.16043 USD
+
+ 31.12.2025      Closing balance                                                                                                                                                  395.38
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Distribution fees
+ Within the framework of its financial product distribution activities and within the context of carrying out asset management mandates in connection
+ with ePrivate Banking accounts, Swissquote Bank Ltd ("Swissquote") shall periodically receive, and retain, distribution fees or other retrocessions
+ from certain promoters or issuers of financial products.
+ Please read the information note on distribution fees and other retrocessions, which you will find on our website under
+ https://swissquote.com/distribution-fees, which contains detailed information on the subject. This note may be amended at any time to reflect
+ changing circumstances and forms an integral part of your contractual relationship with Swissquote.
+ In accordance with Article 37 of our General Terms and Conditions, you will be deemed to have waived the right to the refund of distribution fees and
+ other types of retrocessions that Swissquote shall receive in future.
+
+
+
+
+
+
+
+
+
+
+
+This notification as well as the transaction are governed by our General Conditions and Safe Custody Regulations.
+Advice without signature. Swissquote Bank Ltd, a bank regulated by the Swiss Financial Market Supervisory Authority (FINMA).
+Swissquote Bank Ltd, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                      Page 5 / 5
+Customer Care : 0848 25 88 88 (from abroad +41 44 825 88 88)

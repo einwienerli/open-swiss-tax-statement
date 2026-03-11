@@ -1,0 +1,282 @@
+Ihr Kontoauszug                                                                  Herrn Max Muster
+Kontoauszug vom 01.01.2024 bis 31.12.2024                                        Herrn Max Muster
+Dokument erstellt am 05.01.2025                                                  Musterstrasse 42
+                                                                                 8001 Zürich
+AnfangssaldoAnfangssaldo               1'866.081'866.08  CHFCHF
+EndsaldoEndsaldo                          351.96351.96  CHFCHF                   IBAN                                            CH12 0878 1000 0123 4560 0
+
+                                                                                 Kunde                                                                    123456
+                                                                                 Kontoart                                                               TRADING
+                                                                                 SWIFT                                                         SWQBCHZZ XXX
+
+
+
+
+
+     Endsaldo aufgeteilt auf alle Währungen
+
+      Schweizer Franken                                     US-Dollar                                             Euro
+      20.78 CHF                                             45.84 USD                                             308.10 EUR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 Dieser Transaktionsbeleg sowie die aufgeführte Transaktion unterliegen unseren Allgemeinen Geschäftsbedingungen und Depotreglement.
+
+                 Bescheid ohne Unterschrift. Swissquote Bank Ltd bereitgestellt, einer der Eidgenössischen Finanzmarktaufsicht (FINMA) unterliegenden Bank.
+
+
+
+
+ Swissquote Bank AG, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                Seite 1 / 4
+ Customer Care : 0848 25 88 88 (Aus dem Ausland +41 44 825 88 88)
+                                                                                                                                                         Dokument erstellt am 05.01.2025
+                   Herrn Max Muster                                                                                                                      Vom 01.01.2024 bis 31.12.2024
+                   IBAN : CH12 0878 1000 0123 4560 0
+
+
+Kontoauszug inCHF
+Saldo per 01.01.2024                                                  0.17 CHF
+Total Belastung                                                   108.12 CHF
+Total Gutschrift                                                  128.73 CHF
+Saldo per 31.12.2024                                               20.78 CHF
+
+
+DATUM         INFORMATION                                               REFERENZ    BELASTUNG            GUTSCHRIFT           VALUTA-DATUM              SALDO (CHF)
+
+01.01.2024       Anfangsbestand                                                                                                                                                                0.17
+
+
+
+11.03.2024       Dividende                                               529727717                                     128.70                         11.03.2024                           128.87
+                 NOVARTIS N (NOVN)
+                 Anzahl: 60
+                 Betrag: CHF 198.00
+                 Taxen: CHF 69. 3
+                 Total: CHF 128.70
+29.03.2024                                                                                  27.03                                                                 29.03.2024                             101.84
+                 Depotgebühren
+
+
+28.06.2024                                                                                  27.03                                                     28.06.2024                             74.81
+                 Depotgebühren
+
+
+30.09.2024                                                                                  27.03                                                                 30.09.2024                               47.78
+                 Depotgebühren
+
+
+31.12.2024                                                                                  27.03                                                     31.12.2024                             20.75
+                 Depotgebühren
+
+
+31.12.2024       Habenzinsen                                                                                           0.03                                31.12.2024                               20.78
+                 Habenzinsen
+
+
+31.12.2024       Schlussbilanz                                                                                                                                                               20.78
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Dieser Transaktionsbeleg sowie die aufgeführte Transaktion unterliegen unseren Allgemeinen Geschäftsbedingungen und Depotreglement.
+
+                    Bescheid ohne Unterschrift. Swissquote Bank Ltd bereitgestellt, einer der Eidgenössischen Finanzmarktaufsicht (FINMA) unterliegenden Bank.
+
+
+
+
+Swissquote Bank AG, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                               Seite 2 / 4
+Customer Care : 0848 25 88 88 (Aus dem Ausland +41 44 825 88 88)
+                                                                                                                                                  Dokument erstellt am 05.01.2025
+                  Herrn Max Muster                                                                                                                Vom 01.01.2024 bis 31.12.2024
+                  IBAN : CH12 0878 1000 0123 4560 0
+
+
+Kontoauszug inUSD
+Saldo per 01.01.2024                                         1'814.39 USD
+Total Belastung                                              2'132.77 USD
+Total Gutschrift                                               364.22 USD
+Saldo per 31.12.2024                                            45.84 USD
+
+
+DATUM         INFORMATION                                               REFERENZ    BELASTUNG            GUTSCHRIFT           VALUTA-DATUM              SALDO (USD)
+
+01.01.2024      Anfangsbestand                                                                                                                                                  1'814.39
+
+
+
+19.01.2024      Dividende                                            499200362                                    64.57                        18.01.2024                       1'878.96
+                ALIBABA GROUP HOLDING ADR REP 8
+                ORD (BABA)
+                Anzahl: 66
+                Betrag: USD 66.00
+                Taxen: USD 0.00
+                Total: USD 64.57
+01.03.2024      Dividende                                            523237817                                        29.40                              01.03.2024                         1'908.36
+                PFIZER ORD (PFE)
+                Anzahl: 100
+                Betrag: USD 42.00
+                Taxen: USD 6. 3
+                Total: USD 29.40
+26.11.2024      Automatisierter Währungstausch                        709951868                                        7.33                                26.11.2024                         2'132.77
+                EUR - USD
+                1 USD = 0.96317 EUR
+
+26.11.2024      Kauf                                                  709776908           2'132.77                                                 27.11.2024                              0.00
+                AMGEN ORD (AMGN)
+                Anzahl: 8
+                Preis: USD 262.34
+                Betrag: USD 2'098.77
+                Kommission: USD 30.85
+                Taxen: USD 3.15
+                Handelsplatz: NASDAQ New York
+                ISIN: US0311621009
+31.12.2024      Habenzinsen                                                                                             2.98                            31.12.2024                              45.84
+                Habenzinsen
+
+
+31.12.2024      Schlussbilanz                                                                                                                                                                  45.84
+
+
+
+                   Dieser Transaktionsbeleg sowie die aufgeführte Transaktion unterliegen unseren Allgemeinen Geschäftsbedingungen und Depotreglement.
+
+                   Bescheid ohne Unterschrift. Swissquote Bank Ltd bereitgestellt, einer der Eidgenössischen Finanzmarktaufsicht (FINMA) unterliegenden Bank.
+
+
+
+
+Swissquote Bank AG, 33 chemin de la Crétaux, CH-1196 Gland                                                                                                                      Seite 3 / 4
+Customer Care : 0848 25 88 88 (Aus dem Ausland +41 44 825 88 88)
+                                                                                                                                                Dokument erstellt am 05.01.2025
+                  Herrn Max Muster                                                                                                              Vom 01.01.2024 bis 31.12.2024
+                  IBAN : CH12 0878 1000 0123 4560 0
+
+
+Kontoauszug inEUR
+Saldo per 01.01.2024                                          233.95 EUR
+Total Belastung                                                  7.06 EUR
+Total Gutschrift                                                 81.21 EUR
+Saldo per 31.12.2024                                          308.10 EUR
+
+
+DATUM         INFORMATION                                               REFERENZ    BELASTUNG            GUTSCHRIFT           VALUTA-DATUM              SALDO (EUR)
+
+01.01.2024      Anfangsbestand                                                                                                                                                  233.95
+
+
+
+22.05.2024      Dividende                                           576746227                                   80.99                        21.05.2024                         314.94
+                SAP ORD (SAP)
+                Anzahl: 50
+                Betrag: EUR 110.00
+                Taxen: EUR 29.01
+                Total: EUR 80.99
+26.11.2024      Automatisierter Währungstausch                      709951868     7.06                                                                    26.11.2024                             307.88
+                EUR - USD
+                1 EUR = 1.03824 USD
+
+31.12.2024      Habenzinsen                                                                                     0.22                         31.12.2024                         308.10
+                Habenzinsen
+
+
+31.12.2024      Schlussbilanz                                                                                                                                                   308.10

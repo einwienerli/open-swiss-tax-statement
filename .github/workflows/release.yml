@@ -1,0 +1,95 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - run: ruff check src/ tests/
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[ci]"
+      - run: python -m pytest --cov=src --cov-report=term-missing -q
+
+  verify-offline:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[ci]"
+      - run: python -m pytest tests/test_offline.py -v
+
+  build:
+    needs: verify-offline
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[build]"
+
+      - name: Validate tag matches version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          PKG_VERSION=$(python -c "from src import __version__; print(__version__)")
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "::error::Tag version ($TAG_VERSION) does not match package version ($PKG_VERSION)"
+            exit 1
+          fi
+          echo "VERSION=$PKG_VERSION" >> "$GITHUB_ENV"
+
+      - name: Generate assets
+        run: |
+          python scripts/generate_icon.py
+          python scripts/generate_dmg_background.py
+
+      - name: Build .app bundle
+        run: pyinstaller OpenSwissTaxStatement.spec --noconfirm
+
+      - name: Verify .app exists
+        run: test -d "dist/Open Swiss Tax Statement.app"
+
+      - name: Create DMG
+        run: scripts/build_dmg.sh
+
+      - name: Generate checksums
+        run: |
+          cd dist
+          shasum -a 256 *.dmg > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --draft \
+            --title "Open Swiss Tax Statement $VERSION" \
+            --generate-notes \
+            "dist/OpenSwissTaxStatement-${VERSION}.dmg" \
+            "dist/SHA256SUMS.txt"
