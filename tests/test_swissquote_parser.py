@@ -700,3 +700,32 @@ class TestInterestAccrualFromPortfolio:
 
         gbp = next(cb for cb in cash_balances if cb.currency == "GBP")
         assert gbp.interest_earned == Decimal("0")  # Default
+
+
+class TestDividendQuantityReconstruction:
+    HEADER = "Datum;Auftrag #;Transaktionen;Name;ISIN;Symbol;Anzahl;Stückpreis;Währung Stückpreis;Kosten;Aufgelaufene Zinsen;Nettobetrag;Währung Nettobetrag;Saldo;Währung Saldo\n"
+
+    def test_position_from_prior_year_sold_after_dividend(self, taxpayer):
+        # 100 shares held since 2024, dividend in April (CSV quantity 1),
+        # all sold in June -> no year-end holding. Quantity at the dividend
+        # date must be 100, not the raw CSV value.
+        csv_content = self.HEADER + (
+            "15-04-2025 08:00:00;;Dividende;NESTLE SA;CH0038863350;NESN;1;;;-105.00;;195.00;CHF;195.00;CHF\n"
+            "10-06-2025 09:00:00;ORD1;Verkauf;NESTLE SA;CH0038863350;NESN;100;90.00;CHF;-10.00;;8'990.00;CHF;9'185.00;CHF\n"
+        )
+        stmt = SwissquoteCsvParser().parse(csv_content, tax_year=2025, taxpayer=taxpayer)
+        assert stmt.holdings == []
+        (payment,) = stmt.security_payments
+        assert payment.quantity == Decimal("100")
+        assert payment.amount_per_unit == Decimal("3")
+        assert payment.withholding_tax == Decimal("105")
+
+    def test_bought_and_sold_within_year(self, taxpayer):
+        csv_content = self.HEADER + (
+            "10-02-2025 09:00:00;ORD1;Kauf;NESTLE SA;CH0038863350;NESN;40;90.00;CHF;-10.00;;-3'610.00;CHF;-3'610.00;CHF\n"
+            "15-04-2025 08:00:00;;Dividende;NESTLE SA;CH0038863350;NESN;1;;;-42.00;;78.00;CHF;-3'532.00;CHF\n"
+            "10-06-2025 09:00:00;ORD2;Verkauf;NESTLE SA;CH0038863350;NESN;40;95.00;CHF;-10.00;;3'790.00;CHF;258.00;CHF\n"
+        )
+        stmt = SwissquoteCsvParser().parse(csv_content, tax_year=2025, taxpayer=taxpayer)
+        (payment,) = stmt.security_payments
+        assert payment.quantity == Decimal("40")
