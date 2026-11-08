@@ -178,6 +178,54 @@ def _parse_number(raw: str | None) -> Decimal:
         return Decimal("0")
 
 
+
+# Words that do not identify an issuer: legal forms, share classes, and
+# listing descriptors as used in Swissquote security names.
+_NAME_NOISE_WORDS = frozenset({
+    "n", "na", "nam", "namen", "reg", "regd", "registered", "inh", "br",
+    "ag", "sa", "se", "nv", "plc", "ltd", "inc", "corp", "co", "company",
+    "holding", "holdings", "hldg", "group", "grp", "the",
+    "ord", "shs", "sh", "adr", "ads", "rep",
+})
+
+
+def _name_tokens(name: str) -> frozenset[str]:
+    """Significant lower-case word tokens of a security name.
+
+    Strips a trailing ticker suffix like ``(NOVN)`` and noise words.
+    """
+    name = re.sub(r"\s*\([A-Z0-9.]+\)\s*$", "", name).lower()
+    tokens = re.findall(r"[a-z0-9&]+", name.replace(".", ""))
+    return frozenset(t for t in tokens if t not in _NAME_NOISE_WORDS)
+
+
+def _match_isin_by_name(name: str, candidates: dict[str, str]) -> str | None:
+    """Find the ISIN whose security name matches ``name``.
+
+    Exact match of significant tokens wins; otherwise a one-sided subset
+    match is accepted if it is unique.  Returns None when no or several
+    candidates match.
+    """
+    wanted = _name_tokens(name)
+    if not wanted:
+        return None
+    exact: set[str] = set()
+    partial: set[str] = set()
+    for isin, cand_name in candidates.items():
+        tokens = _name_tokens(cand_name)
+        if not tokens:
+            continue
+        if tokens == wanted:
+            exact.add(isin)
+        elif tokens <= wanted or wanted <= tokens:
+            partial.add(isin)
+    if len(exact) == 1:
+        return exact.pop()
+    if not exact and len(partial) == 1:
+        return partial.pop()
+    return None
+
+
 def _parse_date(raw: str) -> date:
     """Parse DD.MM.YYYY date string."""
     cleaned = _clean_number(raw)  # Handle any space artifacts
@@ -412,8 +460,10 @@ class SwissquoteKontoauszugParser(BrokerParser):
         else:
             holdings = []
 
-        # 4. Resolve ISINs on dividend payments
-        self._resolve_dividend_isins(all_payments, symbol_isin_map, holdings)
+        # 4. Resolve ISINs on dividend payments and trades
+        self._resolve_dividend_isins(
+            all_payments, symbol_isin_map, holdings, all_transactions,
+        )
 
         # 5. Build security registry from all sources
         securities: dict[str, Security] = {}
@@ -1016,59 +1066,72 @@ class SwissquoteKontoauszugParser(BrokerParser):
         payments: list[SecurityPayment],
         symbol_isin_map: dict[str, str],
         holdings: list[Holding],
+        transactions: list[Transaction] | None = None,
     ) -> None:
-        """Resolve ISINs on dividend payments using symbol->ISIN mappings.
+        """Resolve ISINs on dividend payments (and trades) lacking one.
 
-        Sources:
-        1. Buy/sell orders in the same Kontoauszug (have ISIN)
-        2. Portfolio PDF holdings (have ISIN in their name or directly)
+        Kontoauszug dividend rows (and often trade rows) carry only a name
+        and ticker, e.g. ``NOVARTIS N (NOVN)``.  Sources, in order:
+
+        1. Ticker -> ISIN from trades in the same Kontoauszug that had an ISIN
+        2. Name match against portfolio holdings and trades with an ISIN
+
+        Name matching compares significant word tokens (legal-form and
+        share-class words like AG, N, SA, INC, ORD are ignored), so
+        ``NOVARTIS N`` matches ``NOVARTIS AG`` while ``ABB`` does not match
+        ``ABBVIE``.  An exact token match wins; otherwise a subset match is
+        accepted only if exactly one candidate qualifies.
+
+        An unresolved Swiss dividend would lose its Verrechnungssteuer
+        claim, so failures are logged as warnings.
         """
-        # Build holdings map: name fragments -> ISIN
-        holdings_name_map: dict[str, str] = {}
+        candidates: dict[str, str] = {}  # ISIN -> name
         for h in holdings:
             if h.security.isin:
-                # Index by name (lowercased) for fuzzy matching
-                holdings_name_map[h.security.name.lower()] = h.security.isin
+                candidates.setdefault(h.security.isin, h.security.name)
+        for tx in transactions or []:
+            if tx.security and tx.security.isin:
+                candidates.setdefault(tx.security.isin, tx.security.name)
+
+        def resolve(name: str, symbol: str | None) -> str | None:
+            if symbol and symbol in symbol_isin_map:
+                return symbol_isin_map[symbol]
+            return _match_isin_by_name(name, candidates)
 
         for payment in payments:
             if payment.security.isin:
-                continue  # Already has ISIN
-
+                continue
             symbol = getattr(payment, "_symbol", None)
-
-            # Try symbol->ISIN map first
-            if symbol and symbol in symbol_isin_map:
+            isin = resolve(payment.security.name, symbol)
+            if isin:
                 payment.security = Security(
-                    isin=symbol_isin_map[symbol],
+                    isin=isin,
                     name=payment.security.name,
                     currency=payment.security.currency,
                 )
-                continue
-
-            # Try matching by security name against holdings
-            pay_name = payment.security.name.lower()
-            for hold_name, isin in holdings_name_map.items():
-                # Check if key parts of the dividend name appear in the holding name
-                # e.g. "NOVARTIS N (NOVN)" should match "NOVARTIS N"
-                # Strip the symbol suffix for comparison
-                clean_pay = re.sub(r"\s*\([A-Z0-9.]+\)\s*$", "", pay_name).strip()
-                clean_hold = re.sub(r"\s*\([A-Z0-9.]+\)\s*$", "", hold_name).strip()
-                if clean_pay and clean_hold and (
-                    clean_pay in clean_hold or clean_hold in clean_pay
-                ):
-                    payment.security = Security(
-                        isin=isin,
-                        name=payment.security.name,
-                        currency=payment.security.currency,
-                    )
-                    break
             else:
-                if symbol:
-                    logger.warning(
-                        "Could not resolve ISIN for dividend: %s (%s)",
-                        payment.security.name,
-                        symbol,
-                    )
+                logger.warning(
+                    "Could not resolve ISIN for dividend: %s (%s)",
+                    payment.security.name,
+                    symbol,
+                )
+
+        for tx in transactions or []:
+            if tx.security is None or tx.security.isin:
+                continue
+            if tx.type not in (TransactionType.BUY, TransactionType.SELL):
+                continue
+            isin = resolve(tx.security.name, getattr(tx, "_symbol", None))
+            if isin:
+                tx.security = Security(
+                    isin=isin,
+                    name=tx.security.name,
+                    currency=tx.security.currency,
+                )
+            else:
+                logger.warning(
+                    "Could not resolve ISIN for trade: %s", tx.security.name,
+                )
 
     # ── Interest annotation (reused pattern from CsvParser) ───────────────
 

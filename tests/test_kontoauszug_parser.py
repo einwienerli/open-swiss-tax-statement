@@ -16,6 +16,7 @@ from src.parsers.swissquote.kontoauszug_parser import (
     SwissquoteKontoauszugParser,
     _clean_number,
     _detect_kontoauszug_locale,
+    _match_isin_by_name,
     _parse_number,
 )
 
@@ -782,3 +783,82 @@ class TestFullParseEnglish:
         sells = [t for t in statement.transactions if t.type == TransactionType.SELL]
         # Boeing x2 + Eli Lilly x1 = 3 sells
         assert len(sells) == 3
+
+
+# ── Name-based ISIN matching (Kontoauszug dividends carry no ISIN) ──────────
+
+
+def _novn_payment() -> SecurityPayment:
+    from datetime import date
+
+    p = SecurityPayment(
+        security=Security(isin="", name="NOVARTIS N (NOVN)", currency="CHF"),
+        payment_date=date(2024, 3, 11),
+        gross_amount=Decimal("198.00"),
+        currency="CHF",
+        withholding_tax=Decimal("69.30"),
+        net_amount=Decimal("128.70"),
+        quantity=Decimal("60"),
+    )
+    p._symbol = "NOVN"  # type: ignore[attr-defined]
+    return p
+
+
+def _holding(isin: str, name: str) -> Holding:
+    return Holding(security=Security(isin=isin, name=name, currency="CHF"), quantity=Decimal("1"))
+
+
+class TestIsinNameMatching:
+    def test_share_class_suffix_differs_from_portfolio_name(self, parser):
+        """'NOVARTIS N' in the Kontoauszug must match 'NOVARTIS AG' in the portfolio."""
+        payments = [_novn_payment()]
+        parser._resolve_dividend_isins(
+            payments, {}, [_holding("CH0012005267", "NOVARTIS AG")],
+        )
+        assert payments[0].security.isin == "CH0012005267"
+
+    def test_no_prefix_false_match(self):
+        assert _match_isin_by_name("ABB LTD N (ABBN)", {"US00287Y1091": "ABBVIE INC"}) is None
+
+    def test_ambiguous_match_left_unresolved(self):
+        candidates = {"CH0000000001": "UBS ETF MSCI WORLD", "CH0000000002": "UBS ETF MSCI EM"}
+        assert _match_isin_by_name("UBS ETF (UBSX)", candidates) is None
+
+    def test_exact_match_wins_over_partial(self):
+        candidates = {"CH0024638196": "SCHINDLER PS", "CH0024638212": "SCHINDLER N"}
+        assert _match_isin_by_name("SCHINDLER PS (SCHP)", candidates) == "CH0024638196"
+
+    def test_resolve_from_trade_in_same_statement(self, parser):
+        """Position sold during the year: not in holdings, but traded with ISIN."""
+        from datetime import date
+
+        sell = Transaction(
+            date=date(2024, 6, 1),
+            type=TransactionType.SELL,
+            security=Security(isin="CH0012005267", name="NOVARTIS AG", currency="CHF"),
+            quantity=Decimal("60"),
+            net_amount=Decimal("5000"),
+            currency="CHF",
+        )
+        payments = [_novn_payment()]
+        parser._resolve_dividend_isins(payments, {}, [], [sell])
+        assert payments[0].security.isin == "CH0012005267"
+
+    def test_unresolved_dividend_is_not_claimed_as_swiss(self):
+        """A missing ISIN must not be treated as Swiss (would claim foreign WHT as VSt)."""
+        from src.generators.ech0196.xml_builder import _determine_income_category
+        from src.models.enums import IncomeCategory
+
+        p = _novn_payment()
+        p.security = Security(isin="", name="PFIZER ORD (PFE)", currency="USD")
+        assert _determine_income_category(p) == IncomeCategory.RUBRIK_B
+
+    def test_pipeline_warns_about_unresolved_isin(self, kontoauszug_text, taxpayer):
+        from src.ui.pipeline import _statement_warnings
+
+        statement = SwissquoteKontoauszugParser().parse(
+            kontoauszug_text, tax_year=2024, taxpayer=taxpayer,
+        )
+        warnings = _statement_warnings(statement)
+        assert any("NOVARTIS N (NOVN)" in w for w in warnings)
+        assert any("schema validation" in w for w in warnings)
