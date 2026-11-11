@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 import time
 import warnings
 from decimal import Decimal
@@ -11,6 +12,7 @@ from pypdf import PdfReader
 
 from src.enrichment import enrich
 from src.enrichment.exchange_rates import has_rates
+from src.generators.ech0196 import build_xml, serialize, validate_xml
 from src.generators.ech0196.xml_builder import _determine_income_category
 from src.generators.pdf import generate_pdf
 from src.models import TaxPayer, TaxStatement
@@ -127,7 +129,46 @@ def _parse_and_enrich(
     except Exception as e:
         raise RuntimeError(f"Enrichment failed: {e}") from e
 
+    parse_warnings.extend(_statement_warnings(statement))
+
     return statement, parse_warnings
+
+
+def _statement_warnings(statement: TaxStatement) -> list[str]:
+    """Warn about data that would make the E-Steuerauszug wrong or invalid."""
+    result: list[str] = []
+    unresolved = sorted(
+        {p.security.name for p in statement.security_payments
+         if len(p.security.isin or "") != 12}
+        | {t.security.name for t in statement.transactions
+           if t.security and t.type in (TransactionType.BUY, TransactionType.SELL)
+           and len(t.security.isin or "") != 12}
+    )
+    if unresolved:
+        logger.warning("Securities without ISIN: %d", len(unresolved))
+        result.append(
+            "No ISIN found for: " + ", ".join(unresolved) + ". "
+            "These entries will be invalid in the tax statement, and a Swiss "
+            "withholding tax (Verrechnungssteuer) refund for them will not be "
+            "claimed. Use the Swissquote CSV export instead of the account "
+            "statement PDF, which includes the ISIN for every transaction."
+        )
+    try:
+        validation = validate_xml(serialize(build_xml(statement)))
+    except Exception:
+        logger.warning("XSD validation could not run", exc_info=True)
+    else:
+        if not validation.is_valid:
+            # Mask attribute values so no personal data reaches the log
+            masked = [re.sub(r"The value '[^']*'", "The value '…'", e)
+                      for e in validation.errors]
+            logger.warning("Generated XML fails XSD validation: %s", masked)
+            result.append(
+                "The generated tax statement does not pass eCH-0196 schema "
+                "validation; the tax portal may reject or misread it. "
+                "Details are in the app log."
+            )
+    return result
 
 
 def _statement_to_summary(statement: TaxStatement) -> dict:

@@ -17,6 +17,7 @@ from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen.canvas import Canvas
 
 from src.generators.barcode.orchestrator import BarcodeSet
+from src.generators.ech0196.xml_builder import _determine_income_category
 from src.models import (
     Holding,
     IncomeCategory,
@@ -239,7 +240,7 @@ class PdfRenderer:
             rev_a = Decimal("0")
             rev_b = Decimal("0")
             for p in isin_payments:
-                cat = p.income_category or security.income_category
+                cat = _determine_income_category(p)
                 gross = p.gross_amount_chf if p.gross_amount_chf is not None else p.gross_amount
                 if cat == IncomeCategory.RUBRIK_A:
                     rev_a += gross
@@ -261,13 +262,16 @@ class PdfRenderer:
                 c.setFont(FONT_FAMILY, FONT_SIZE_SMALL)
                 x = MARGIN_LEFT + col_widths[0]  # indent under Bezeichnung
                 pay_date = p.payment_date.strftime("%d.%m.%Y")
-                cat = p.income_category or security.income_category
-                cat_label = f"Rubrik {cat.value}" if cat else "Rubrik B"
+                cat = _determine_income_category(p)
+                cat_label = f"Rubrik {cat.value}"
+                # Only Rubrik A tax is Swiss Verrechnungssteuer (refundable);
+                # Rubrik B tax is foreign withholding tax (Quellensteuer).
+                tax_label = "VSt" if cat == IncomeCategory.RUBRIK_A else "QSt"
                 gross_val = p.gross_amount_chf if p.gross_amount_chf is not None else p.gross_amount
                 gross = self._format_chf(gross_val)
                 wht_val = p.withholding_tax_chf if p.withholding_tax_chf is not None else p.withholding_tax
                 wht = self._format_chf(wht_val)
-                c.drawString(x, y, f"  {pay_date}  {cat_label}  Brutto: {gross}  VSt: {wht}")
+                c.drawString(x, y, f"  {pay_date}  {cat_label}  Brutto: {gross}  {tax_label}: {wht}")
                 y -= TABLE_ROW_HEIGHT
 
         self._draw_page_barcode(c, has_pdf417=False)
@@ -468,18 +472,22 @@ class PdfRenderer:
         ZERO = Decimal("0")
         s = self._stmt
 
-        sec_value = s.total_tax_value
-        if sec_value is None:
-            sec_value = sum(
-                ((h.tax_value_chf or ZERO) for h in s.holdings), ZERO
-            )
+        sec_value = sum(
+            ((h.tax_value_chf or ZERO) for h in s.holdings), ZERO
+        )
         cash_value = sum(
             ((cb.tax_value_chf or ZERO) for cb in s.cash_balances), ZERO
         )
-        total_value = sec_value + cash_value
+        # total_tax_value is the overall total (securities + cash), matching
+        # the XML root attribute — not the securities-only subtotal.
+        total_value = (
+            s.total_tax_value if s.total_tax_value is not None
+            else sec_value + cash_value
+        )
 
-        def _pay_category(p: SecurityPayment) -> IncomeCategory | None:
-            return p.income_category or (p.security.income_category if p.security else None)
+        # Same classification as the XML builder, so the printed pages match
+        # the barcode data (CH ISIN + WHT > 0 -> Rubrik A).
+        _pay_category = _determine_income_category
 
         rev_a = s.total_gross_revenue_a
         if rev_a is None:

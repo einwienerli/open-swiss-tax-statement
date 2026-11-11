@@ -154,8 +154,10 @@ def _determine_income_category(
         return payment.income_category
     if payment.security.income_category is not None:
         return payment.security.income_category
-    country = _determine_country(payment.security.isin)
-    if country == "CH" and payment.withholding_tax > 0:
+    # Require a real Swiss ISIN: _determine_country() falls back to "CH" for
+    # a missing ISIN, which would claim foreign withholding tax as Swiss VSt.
+    isin = payment.security.isin or ""
+    if len(isin) == 12 and isin[:2].upper() == "CH" and payment.withholding_tax > 0:
         return IncomeCategory.RUBRIK_A
     return IncomeCategory.RUBRIK_B
 

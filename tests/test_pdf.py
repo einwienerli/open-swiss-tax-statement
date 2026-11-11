@@ -483,3 +483,52 @@ class TestPdfFooter:
         text = reader.pages[0].extract_text() or ""
         assert "Open Swiss Tax" in text
         assert "Input:" not in text  # No input line when no filenames
+
+
+class TestPdfTotalsMatchXml:
+    """Printed PDF totals must use the same Rubrik A/B logic as the XML."""
+
+    def test_swiss_dividend_without_explicit_category_is_rubrik_a(self, taxpayer, institution):
+        # Parsers never set income_category; the XML builder applies the
+        # CH-ISIN + WHT heuristic. The printed summary must do the same,
+        # otherwise the Verrechnungssteueranspruch shows 0.
+        nestle = Security(isin="CH0038863350", name="NESTLE SA", currency="CHF")
+        apple = Security(isin="US0378331005", name="APPLE INC", currency="USD")
+        stmt = TaxStatement(
+            tax_year=2025,
+            period_from=date(2025, 1, 1),
+            period_to=date(2025, 12, 31),
+            taxpayer=taxpayer,
+            institution=institution,
+            security_payments=[
+                SecurityPayment(
+                    security=nestle, payment_date=date(2025, 4, 17),
+                    gross_amount=Decimal("300"), currency="CHF",
+                    withholding_tax=Decimal("105"), net_amount=Decimal("195"),
+                ),
+                SecurityPayment(
+                    security=apple, payment_date=date(2025, 5, 10),
+                    gross_amount=Decimal("20"), currency="USD",
+                    withholding_tax=Decimal("3"), net_amount=Decimal("17"),
+                    gross_amount_chf=Decimal("18"), withholding_tax_chf=Decimal("2.70"),
+                ),
+            ],
+            account_number="123456",
+        )
+        totals = PdfRenderer(stmt, "", None)._compute_totals()
+        assert totals["revenue_a"] == Decimal("300")
+        assert totals["wht_claim"] == Decimal("105")
+        assert totals["revenue_b"] == Decimal("18")
+
+        from src.generators.ech0196 import build_xml
+        root = build_xml(stmt)
+        assert Decimal(root.get("totalGrossRevenueA")) == totals["revenue_a"]
+        assert Decimal(root.get("totalWithHoldingTaxClaim")) == totals["wht_claim"]
+
+    def test_total_tax_value_not_double_counting_cash(self, empty_statement):
+        empty_statement.cash_balances = [
+            CashBalance(currency="CHF", balance=Decimal("100"), tax_value_chf=Decimal("100")),
+        ]
+        empty_statement.total_tax_value = Decimal("100")
+        totals = PdfRenderer(empty_statement, "", None)._compute_totals()
+        assert totals["total_value"] == Decimal("100")

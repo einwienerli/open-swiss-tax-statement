@@ -562,12 +562,12 @@ class SwissquoteCsvParser(BrokerParser):
         rather than the actual share count. This method reconstructs the
         position at each dividend date to get the correct quantity.
 
-        Strategy:
-        - If a year-end holding exists: work backwards from year-end,
-          adjusting for post-dividend buy/sell transactions.
-        - If no year-end holding: reconstruct forward from buy/sell
-          transactions in the CSV (works for same-year bought+sold).
-        - If neither works: leave quantity as-is from CSV.
+        Strategy: work backwards from the year-end position (0 when there is
+        no year-end holding), undoing buy/sell transactions that happened
+        AFTER the dividend date.  Working backwards (instead of summing
+        in-year transactions forward from zero) is what makes positions that
+        were opened in an earlier year and sold during this year come out
+        right.  If no positive quantity results, the CSV value is kept.
         """
         holdings_map = {h.security.isin: h.quantity for h in holdings}
 
@@ -582,29 +582,17 @@ class SwissquoteCsvParser(BrokerParser):
 
         for payment in security_payments:
             isin = payment.security.isin
-            year_end_qty = holdings_map.get(isin)
+            year_end_qty = holdings_map.get(isin) or Decimal("0")
+            txns = txns_by_isin.get(isin, [])
+            if year_end_qty <= 0 and not txns:
+                continue
 
-            if year_end_qty is not None and year_end_qty > 0:
-                # Reconstruct from year-end holding, adjusting for
-                # buy/sell that happened AFTER this dividend
-                buys_after = Decimal("0")
-                sells_after = Decimal("0")
-                for txn_date, signed_qty in txns_by_isin.get(isin, []):
-                    if txn_date > payment.payment_date:
-                        if signed_qty > 0:
-                            buys_after += signed_qty
-                        else:
-                            sells_after += abs(signed_qty)
-                qty_at_div = year_end_qty - buys_after + sells_after
-            else:
-                # No year-end holding — forward reconstruction
-                txns = txns_by_isin.get(isin, [])
-                if not txns:
-                    continue
-                qty_at_div = Decimal("0")
-                for txn_date, signed_qty in sorted(txns, key=lambda x: x[0]):
-                    if txn_date <= payment.payment_date:
-                        qty_at_div += signed_qty
+            net_after = sum(
+                (signed_qty for txn_date, signed_qty in txns
+                 if txn_date > payment.payment_date),
+                Decimal("0"),
+            )
+            qty_at_div = year_end_qty - net_after
 
             if qty_at_div > 0:
                 payment.quantity = qty_at_div

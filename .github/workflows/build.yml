@@ -1,0 +1,42 @@
+name: Build (test DMG)
+
+# Builds the macOS app for testing a branch, without creating a release.
+# The DMG is attached to the workflow run as a downloadable artifact.
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[build]"
+
+      - name: Generate assets
+        run: |
+          python scripts/generate_icon.py
+          python scripts/generate_dmg_background.py
+
+      - name: Build .app bundle
+        run: pyinstaller OpenSwissTaxStatement.spec --noconfirm
+
+      - name: Create DMG
+        run: scripts/build_dmg.sh
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: OpenSwissTaxStatement-dmg
+          path: dist/*.dmg
+          retention-days: 14
